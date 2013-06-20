@@ -1,0 +1,14 @@
+<h1>Search Page</h1>
+
+<%= form_tag search_contacts_path, :method => 'get' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "search" %>
+<% end %>
+
+<% if !@contacts.empty? %>
+  <%= render 'contacts' %>
+<% else %>
+  <p>No Search results</p>
+<% end %>
+
+<%= link_to 'Back', contacts_path %>
