@@ -36,3 +36,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "cucumber-rails", ">= 1.3.1", :group => :test, :require => false
+gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
+gem "launchy", ">= 2.2.0", :group => :test
+gem "capybara", ">= 2.0.3", :group => :test
+gem "bootstrap-sass", ">= 2.3.0.0"
+gem "simple_form", ">= 2.1.0"
