@@ -30,6 +30,11 @@
   <%= @contact.twitter_account %>
 </p>
 
+<p>
+  <b>Photo:</b>
+  <%= image_tag @contact.avatar.url(:thumb) %>
+</p>
+
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
