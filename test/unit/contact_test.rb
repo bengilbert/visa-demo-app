@@ -21,6 +21,6 @@ class ContactTest < ActiveSupport::TestCase
   end
 
   test "searching for a valid name results an array of matches" do
-    !assert_blank Contact.findByLastName("gilbert")
+    assert_present Contact.findByLastName("gilbert")
   end
 end
