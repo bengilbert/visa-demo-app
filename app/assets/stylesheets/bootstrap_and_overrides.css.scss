@@ -1,5 +1,58 @@
 @import "bootstrap";
 body { padding-top: 60px; }
+
+h1 {
+	margin-bottom : 40px;
+}
+
+#menu {
+  float : right;
+  padding-top : 6px;  
+}
+
+table.contacts th {
+  padding-right : 15px;
+  text-align : left;
+}
+
+table.contacts th.name {
+  width : 100px;
+ }
+
+table.contacts th.email {
+  width : 300px;
+}
+
+table.contacts th.phone-number {
+  width : 100px;
+}
+
+table.contacts th.twitter-id {
+  width : 80px;
+}
+
+table.contacts th.thumb-image {
+  width : 80px;
+}
+
+table.contacts a.link {
+  padding-right : 5px;
+}
+
+table.contacts td {
+	padding-bottom : 15px;
+	vertical-align : top;
+}
+
+.label-medium {
+	width : 100px;
+}
+
+footer .container {
+	padding-top : 5px;
+	text-align : center;
+}
+
 @import "bootstrap-responsive";
 
 

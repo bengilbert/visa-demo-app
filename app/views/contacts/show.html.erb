@@ -1,40 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>First name:</b>
-  <%= @contact.first_name %>
-</p>
+<h1><%= @contact.first_name %> <%= @contact.last_name %></h1>
 
-<p>
-  <b>Last name:</b>
-  <%= @contact.last_name %>
-</p>
+<div class="row">
+  <div class="span2"><b class="label-medium">Email address</b></div>
+  <div class="span10"><%= @contact.email_address %></div>
+</div>
 
-<p>
-  <b>Email address:</b>
-  <%= @contact.email_address %>
-</p>
+<div class="row">
+  <div class="span2"><b class="label-medium">Mobile</b></div>
+  <div class="span10"><%= @contact.mobile_number %></div>
+</div>
 
-<p>
-  <b>Mobile number:</b>
-  <%= @contact.mobile_number %>
-</p>
+<div class="row">
+  <div class="span2"><b class="label-medium">Landline</b></div>
+  <div class="span10"><%= @contact.landline_number %></div>
+</div>
 
-<p>
-  <b>Landline number:</b>
-  <%= @contact.landline_number %>
-</p>
+<div class="row">
+  <div class="span2"><b class="label-medium">Twitter</b></div>
+  <div class="span10"><%= @contact.twitter_account %></div>
+</div>
 
-<p>
-  <b>Twitter account:</b>
-  <%= @contact.twitter_account %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= image_tag @contact.avatar.url(:thumb) %>
-</p>
-
+<div class="row">
+  <div class="span2"><b class="label-medium">Photo</b></div>
+  <div class="span10"><%= image_tag @contact.avatar.url(:thumb) %></div>
+</div>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

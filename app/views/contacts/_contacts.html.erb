@@ -1,15 +1,15 @@
-<table>
+<table class='contacts, table'>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email address</th>
-    <th>Mobile number</th>
-    <th>Landline number</th>
-    <th>Twitter account</th>
-    <th>Avatar</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th class='name'>First</th>
+    <th class='name'>Last</th>
+    <th class='email'>Email</th>
+    <th class='phone-number'>Mobile</th>
+    <th class='phone-number'>Landline</th>
+    <th class='twitter-id'>Twitter</th>
+    <th class='thumb-image'>Avatar</th>
+    <th class='link'></th>
+    <th class='link'></th>
+    <th class='link'></th>
   </tr>
 
 <% @contacts.each do |contact| %>
@@ -21,9 +21,9 @@
     <td><%= contact.landline_number %></td>
     <td><%= contact.twitter_account %></td>
     <td><%= image_tag contact.avatar.url(:thumb) %></td>
-    <td><%= link_to 'Show', contact %></td>
-    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-    <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_contact' %></td>
+    <td><%= link_to 'Show', contact, :class => 'link' %></td>
+    <td><%= link_to 'Edit', edit_contact_path(contact), :class => 'link' %></td>
+    <td><%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'delete_contact, link' %></td>
   </tr>
 <% end %>
 </table>

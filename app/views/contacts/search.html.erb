@@ -1,14 +1,21 @@
-<h1>Search Page</h1>
+<h1>Search for contacts</h1>
 
-<%= form_tag search_contacts_path, :method => 'get' do %>
-  <%= text_field_tag :search, params[:search] %></br>
-  <%= submit_tag "search" %>
-<% end %>
+<div>
+  <%= form_tag search_contacts_path, :method => 'get', :class => 'navbar-form pull-left' do %>
+    <%= text_field_tag :search, params[:search], :placeholder => 'Enter last name', :class => 'span2' %>
+    <%= submit_tag "Search", :class => 'btn'%>
+  <% end %>
+</div>
 
-<% if !@contacts.empty? %>
-  <%= render 'contacts' %>
-<% else %>
-  <p>No Search results</p>
-<% end %>
+<br/>
+<br/>
+
+<p>
+  <% if !@contacts.empty? %>
+    <%= render 'contacts' %>
+  <% else %>
+    No Search results
+  <% end %>
+</p>
 
 <%= link_to 'Back', contacts_path %>

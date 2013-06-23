@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title><%= content_for?(:title) ? yield(:title) : "VISA(tm) contact oracle" %></title>
+    <meta name="description" content="Demostration application for VISA(tm)">
+    <meta name="author" content="Ben Gilbert">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -28,7 +28,14 @@
               <%= yield %>
             </div>
           </div>
-          <footer>
+          <footer class="navbar navbar-fixed-bottom">
+      <nav class="navbar-inner">
+        <div class="container">
+          Simple Rails 3.2 demostration application.  For more information please contact <a href="mailto:ben.gilbert.london@gmail.com?Subject=Hello">
+Ben Gilbert</a>
+
+        </div>
+      </nav>            
           </footer>
         </div>
       </div> <!--! end of .container -->
