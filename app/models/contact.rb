@@ -10,6 +10,8 @@ class Contact < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email_address, :mobile_number, :landline_number, :twitter_account, :id, :created_at, :updated_at, :avatar
 
   def self.findByLastName(lastName)
-    Contact.where(:last_name => lastName)
+    matchingContacts = []
+    matchingContacts = Contact.find(:all, :conditions => ["lower(last_name) = ?", lastName.downcase]) if !lastName.blank?
+    return matchingContacts
   end
 end
